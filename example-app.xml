@@ -1,0 +1,6 @@
+<application>
+	<title>BrowserQuest client</title>
+	<baseurl>http://browserquest.mozilla.org/</baseurl>	
+	<width>1005</width>
+	<height>660</height>
+</application>
