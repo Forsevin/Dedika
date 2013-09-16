@@ -1,33 +1,41 @@
-#include <iostream>
-
 #include "Dedika.hpp"
+
+/*
+	This file is part of the Dedika project.
+
+    Dedika is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Foobar is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Dedika.  If not, see <http://www.gnu.org/licenses/>.
+*/
 
 int main(int argc, char *argv[])
 {
 	if (argc < 2) {
-		std::cout << "[W] Nothing to start" << std::endl;
 		return 0;
 	}
-	
-	std::cout << "[I] Attempting to start " << argv[1] << std::endl;
 	
 	Dedika app(argc, argv);
 	
 	// Attempt to inititalize
 	if (!app.Init(argv[1])) {
-		std::cout << "[E] Couldn't inititalize application" << std::endl;
+		app.Error("Couldn't inititalize application");
 		return 0;
 	}
-	
-	std::cout << "[I] App inititialized" << std::endl;
-	
+		
 	// Attempt to run
 	if (!app.Run()) {
-		std::cout << "[E] Couldn't run application" << std::endl;
+		app.Error("Couldn't run application");
 		return 0;
 	}
-	
-	std::cout << "[I] Quitting silently..." << std::endl;
 	
 	return 0;
 }

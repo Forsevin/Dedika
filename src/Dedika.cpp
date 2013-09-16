@@ -45,9 +45,9 @@ bool Dedika::Init(std::string appName)
 	root = XMLApp.first_node("application");
 	
 	title 	= root->first_node("title")->value();
+	baseurl = root->first_node("baseurl")->value();
 	width 	= atoi(root->first_node("width")->value());
 	height	= atoi(root->first_node("height")->value());
-	baseurl = root->first_node("baseurl")->value();
 		
 	// Signals
 	g_signal_connect (window, "destroy", G_CALLBACK (Quit), NULL);
@@ -82,6 +82,12 @@ bool Dedika::Run()
 
 bool Dedika::InitAPI() {
 	
+}
+
+void Dedika::Error(std::string error)
+{
+	std::cout << "[E] " << error << std::endl;
+	Quit(NULL, NULL, 0);
 }
 
 void Quit(GtkWidget *widget, GdkEvent *event, gpointer data)
