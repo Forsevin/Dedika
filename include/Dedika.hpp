@@ -38,6 +38,7 @@ public:
 	bool Init(std::string appName);
 	bool Run();
 	bool InitAPI();
+	void Error(std::string error);
 private:
 	std::string name;
 	std::string title;
