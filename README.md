@@ -1,5 +1,3 @@
-![Dedika logo](http://i.imgur.com/lEzVabB.png)
-
 The idea behind Dedika is to make the usage of certain web application more “dedicated” by providing a simple, clean and lightweight way to display web pages without miscellaneous GUIs, functionality etc.
 
 An dedika application are defined through XML and consists (as of now) by title, baseurl, width and height, which get applied to the window.
@@ -19,3 +17,5 @@ $ (sudo) make install
 
 
 You can put the example-application.xml in $HOME/.dedika/apps/ and run it through dedika-run example-application.
+
+![Dedika logo](http://i.imgur.com/lEzVabB.png)
