@@ -1,5 +1,4 @@
-Dedika
-======
+![Dedika logo](http://i.imgur.com/lEzVabB.png)
 
 The idea behind Dedika is to make the usage of certain web application more “dedicated” by providing a simple, clean and lightweight way to display web pages without miscellaneous GUIs, functionality etc.
 
